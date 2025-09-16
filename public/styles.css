@@ -430,20 +430,26 @@ h6 {
 
 /* Mobile/tablet refinements */
 /* Improve readability of About section on mobile */
+/* About Section - Mobile readability */
 @media (max-width: 768px) {
   .about-section p {
-    font-size: 0.95rem;       /* slightly smaller text */
-    line-height: 1.6;         /* tighter line height */
-    letter-spacing: 0.2px;    /* subtle spacing for readability */
-    margin-bottom: 1rem;      /* give breathing space */
+    font-size: 0.9rem;        /* smaller font for phones */
+    line-height: 1.5;         /* tighter line height */
+    font-weight: 400;         /* normal weight */
+    letter-spacing: 0.2px;    /* subtle spacing */
+    margin-bottom: 1rem;
+    max-width: 95%;           /* prevent text from stretching edge-to-edge */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .about-section .lead {
-    font-size: 1.05rem;       /* slightly bigger lead text */
-    line-height: 1.7;
-    text-align: justify;      /* still justified */
+    font-size: 1rem;          /* slightly larger than body */
+    line-height: 1.6;
+    text-align: justify;
   }
 }
+
 
 
   .about-section ul {
