@@ -95,8 +95,10 @@ h6 {
 
 /* Navigation */
 .navbar {
+  backdrop-filter: blur(10px);
   background-color:  #8b3333;;
   padding: 1rem 0;
+
 }
 
 /* Brand */
