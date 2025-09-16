@@ -205,9 +205,26 @@ h6 {
   border-radius: 16px;
   transition: all 0.3s ease;
   background-color: var(--warm-white);
-  max-width: 350px;     /* added */
-  margin: 0 auto 20px;  /* added */
+  
 }
+
+/* Speaker cards in index.html */
+#speakers .card {
+  max-width: 350px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+/* Speaker section images */
+#speakers .card img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+
 
 
 .hover-card:hover {
@@ -631,16 +648,31 @@ html {
 }
 
 
-/* Team Member Cards */
-.team-member-card img {
-  object-fit: cover;
-  border-radius: 50%;      /* added */
-  width: 120px;            /* fixed size for consistency */
-  height: 120px;
-  margin: 0 auto 1rem;     /* center */
-  border: 4px solid var(--warm-white);
-  box-shadow: 0 4px 12px var(--shadow-light);
+/* Team member cards inside #team */
+#team .card {
+  max-width: 350px;
+  margin: 0 auto 20px;
 }
+
+/* Center card content */
+#team .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers image + text */
+  text-align: center;
+}
+
+/* Team member photos */
+#team .card-body > img {
+  display: block;
+  margin: 0 auto 1rem;   /* fixed gap above the name */
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
 
 /* Compact Hero */
 .hero-section-small {
