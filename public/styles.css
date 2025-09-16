@@ -429,17 +429,22 @@ h6 {
 }
 
 /* Mobile/tablet refinements */
-@media (max-width: 992px) {
-  .about-section img {
-    max-width: 80%;        /* bigger for small screens */
-    display: block;        /* ensures it's treated as block */
-    margin: 0 auto 1.5rem; /* center + spacing below */
+/* Improve readability of About section on mobile */
+@media (max-width: 768px) {
+  .about-section p {
+    font-size: 0.95rem;       /* slightly smaller text */
+    line-height: 1.6;         /* tighter line height */
+    letter-spacing: 0.2px;    /* subtle spacing for readability */
+    margin-bottom: 1rem;      /* give breathing space */
   }
 
-  .about-section p {
-    font-size: 0.95rem;    /* slightly smaller */
-    line-height: 1.6;      /* tighter for mobile */
+  .about-section .lead {
+    font-size: 1.05rem;       /* slightly bigger lead text */
+    line-height: 1.7;
+    text-align: justify;      /* still justified */
   }
+}
+
 
   .about-section ul {
     text-align: left;
@@ -452,7 +457,7 @@ h6 {
     font-size: 1rem;       /* balanced with mobile font size */
     line-height: 1.5;
   }
-}
+
 
 
 
@@ -539,6 +544,7 @@ section {
 footer {
   background-color: var(--text-primary) !important;
 }
+
 
 /* Animations */
 @keyframes fadeInUp {
