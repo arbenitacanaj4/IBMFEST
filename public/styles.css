@@ -721,3 +721,9 @@ html {
   from { transform: translateY(0); }
   to { transform: translateY(-10px); }
 }
+@media (max-width: 768px) {
+  .hero-image {
+    margin-top: 2rem;
+    padding-left: 0;
+  }
+}
