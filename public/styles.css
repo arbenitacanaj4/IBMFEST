@@ -351,7 +351,7 @@ h6 {
 .about-section .lead {
   max-width: 700px;  
   margin-left: auto;
-  white-space: nowrap;
+  white-space: normal;
   margin-right: auto; 
   text-align: center; 
 }
@@ -726,4 +726,26 @@ html {
     margin-top: 2rem;
     padding-left: 0;
   }
+}
+
+@media (max-width: 576px) {
+  .partner-logo {
+    height: auto;
+  }
+
+  .partner-logo img {
+    max-height: 80px;
+  }
+}
+/* Prevent horizontal overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make sure images scale inside container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
