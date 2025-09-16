@@ -699,6 +699,19 @@ html {
 .team-hero-badge:hover {
   transform: scale(1.05);
 }
+/* Hero CTA buttons */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* center horizontally */
+  gap: 1rem;
+}
+
+.hero-buttons .btn {
+  flex: 1 1 auto;
+  min-width: 140px;
+  text-align: center;
+}
 
 /* Mission Card more compact */
 .mission-card {
