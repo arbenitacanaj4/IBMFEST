@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - IBM Quantum Fall Fest 2025</title>
+    <meta name="description" content="Register for IBM Quantum Fall Fest 2025 at BME Budapest. Join us for workshops, talks, and networking in quantum computing.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="bi bi-cpu me-2"></i>
+                IBM Quantum Fall Fest 2025
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section-small">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Register Now</h1>
+                    <p class="lead">
+                        Secure your spot at IBM Quantum Fall Fest 2025
+                    </p>
+                </div>
+                <!-- Added pink QISKIT badge to hero section -->
+                <div class="col-lg-6 text-center">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge-Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8.png" 
+                         alt="QISKIT Fall Fest 2025 Badge" 
+                         class="img-fluid" 
+                         style="max-width: 250px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="successMessage" class="alert alert-success d-none" role="alert">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                            <div>
+                                <h5 class="alert-heading mb-1">Registration Successful!</h5>
+                                <p class="mb-0">Thank you for registering. You'll receive a confirmation email shortly with event details and next steps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Registration Form -->
+                    <div id="registrationForm">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-5">
+                                <!-- Added BME red accent to form title -->
+                                <h3 class="card-title text-center mb-4 text-bme-red">Event Registration</h3>
+                                
+                                <form id="regForm" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="firstName" class="form-label">First Name *</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                            <div class="invalid-feedback">
+                                                Please provide your first name.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="lastName" class="form-label">Last Name *</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                            <div class="invalid-feedback">
+                                                Please provide your last name.
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="email" class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid email address.
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="institution" class="form-label">Institution/Organization *</label>
+                                            <input type="text" class="form-control" id="institution" placeholder="e.g., BME Budapest, IBM, University of..." required>
+                                            <div class="invalid-feedback">
+                                                Please provide your institution or organization.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="role" class="form-label">Role *</label>
+                                            <select class="form-select" id="role" required>
+                                                <option value="">Choose your role...</option>
+                                                <option value="student">Student</option>
+                                                <option value="researcher">Researcher</option>
+                                                <option value="professional">Industry Professional</option>
+                                                <option value="academic">Academic/Faculty</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select your role.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="experience" class="form-label">Quantum Computing Experience</label>
+                                            <select class="form-select" id="experience">
+                                                <option value="">Select level...</option>
+                                                <option value="beginner">Beginner</option>
+                                                <option value="intermediate">Intermediate</option>
+                                                <option value="advanced">Advanced</option>
+                                                <option value="expert">Expert</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="workshops" class="form-label">Workshop Interests (Optional)</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="intro" id="workshop1">
+                                                <label class="form-check-label" for="workshop1">
+                                                    Introduction to Quantum Computing
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="algorithms" id="workshop2">
+                                                <label class="form-check-label" for="workshop2">
+                                                    Quantum Algorithms & Programming
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="hardware" id="workshop3">
+                                                <label class="form-check-label" for="workshop3">
+                                                    Quantum Hardware & Systems
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="applications" id="workshop4">
+                                                <label class="form-check-label" for="workshop4">
+                                                    Quantum Applications & Use Cases
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="dietary" class="form-label">Dietary Requirements (Optional)</label>
+                                            <input type="text" class="form-control" id="dietary" placeholder="e.g., Vegetarian, Vegan, Gluten-free, None">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="comments" class="form-label">Additional Comments (Optional)</label>
+                                            <textarea class="form-control" id="comments" rows="3" placeholder="Any questions or special requirements?"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                                                <label class="form-check-label" for="newsletter">
+                                                    I would like to receive updates about future quantum events
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                                <label class="form-check-label" for="terms">
+                                                    I agree to the <a href="#" class="text-primary">terms and conditions</a> and <a href="#" class="text-primary">privacy policy</a> *
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    You must agree to the terms and conditions.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <!-- Changed primary button to BME red for registration CTA -->
+                                            <button type="submit" class="btn btn-bme-red btn-lg px-5">
+                                                <i class="bi bi-calendar-check me-2"></i>
+                                                Complete Registration
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Details Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Added quantum atom illustration above event details -->
+                    <div class="text-center mb-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Atom_01-2rLyQNTPikSEoE91j5opmavdjPVkhm.png" 
+                             alt="Quantum Computing" 
+                             class="img-fluid" 
+                             style="max-width: 150px;">
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm bg-bme-light">
+                        <div class="card-body p-4">
+                            <h5 class="card-title text-bme-red mb-4">
+                                <i class="bi bi-info-circle me-2"></i>
+                                Event Details
+                            </h5>
+                            
+                            <div class="mb-3">
+                                <h6 class="fw-bold">Dates</h6>
+                                <p class="mb-0">October 15-17, 2025</p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6 class="fw-bold">Location</h6>
+                                <p class="mb-0">BME Budapest<br>
+                                Műegyetem rkp. 3<br>
+                                1111 Budapest, Hungary</p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6 class="fw-bold">Registration Fee</h6>
+                                <p class="mb-0 text-success fw-bold">FREE for all participants</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6 class="fw-bold">What's Included</h6>
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="bi bi-check text-success me-2"></i>All workshop sessions</li>
+                                    <li><i class="bi bi-check text-success me-2"></i>Expert talks & presentations</li>
+                                    <li><i class="bi bi-check text-success me-2"></i>Networking opportunities</li>
+                                    <li><i class="bi bi-check text-success me-2"></i>Lunch & refreshments</li>
+                                    <li><i class="bi bi-check text-success me-2"></i>Certificate of participation</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="small text-muted mb-2">Questions about registration?</p>
+                                <!-- Changed contact button to BME red outline style -->
+                                <a href="mailto:quantumfest@bme.hu" class="btn btn-outline-bme-red btn-sm">
+                                    <i class="bi bi-envelope me-1"></i>
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Added additional quantum badge at bottom of sidebar -->
+                    <div class="text-center mt-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_01-XwXod.png" 
+                             alt="QISKIT Fall Fest Badge" 
+                             class="img-fluid" 
+                             style="max-width: 120px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 IBM Quantum Fall Fest. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Organized by BME Budapest in collaboration with IBM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
